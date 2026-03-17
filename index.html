@@ -1,13 +1,126 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>SDAV2026 - s214643</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDAV2026 — San Francisco Crime Explorer</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <h1>Hello World!</h1>
-    <p>This site will soon contain interactive data visualizations about crime in San Francisco.</p>
-    <img src="figures/daily_focus_crimes_counts.png" alt="Yearly crime trends" style="max-width: 100%;">
-    <iframe src="visualizations/crime_dotmap.html" width="100%" height="600" frameborder="0"></iframe>
-    <iframe src="visualizations/normalized_crime_count_hour.html" width="100%" height="600" frameborder="0"></iframe>
+    <header>
+        <div class="container header-row">
+            <div class="brand">SDAV2026 · s214643</div>
+            <nav>
+                <a href="#overview">Overview</a>
+                <a href="#visualizations">Visualizations</a>
+                <a href="#method">Method</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="overview" class="hero">
+            <div class="hero-card">
+                <span class="eyebrow">San Francisco Crime Atlas</span>
+                <h1>Exploring crime patterns in San Francisco - One of the most iconic cities in the United States of America</h1>
+                <p class="lead">
+                    This page presents a small visual story built from historical San Francisco police incident reports.
+                    You can scan long-term trends, explore neighborhood-level geography, and compare how incident intensity
+                    changes across the day.
+                </p>
+
+                <div class="facts">
+                    <div class="fact">
+                        <strong>Urban shape</strong>
+                        San Francisco is often described as a “seven-by-seven-mile” city.
+                    </div>
+                    <div class="fact">
+                        <strong>Terrain</strong>
+                        More than 50 hills create strong neighborhood contrasts.
+                    </div>
+                    <div class="fact">
+                        <strong>Climate</strong>
+                        Fog and coastal winds produce sharp microclimate differences.
+                    </div>
+                </div>
+                <div class="focus-crimes">
+                    <h3>Focus crime categories</h3>
+                    <p>
+                        This analysis examines nine incident types chosen for their frequency and significance in understanding
+                        urban crime patterns. These span property crime, violent crime, drug-related incidents, and administrative cases:
+                    </p>
+                    <ul>
+                        <li><strong>Larceny/theft</strong> — The largest category; includes shoplifting, car break-ins, and personal theft</li>
+                        <li><strong>Non-criminal</strong> — Administrative reports, lost property, and other non-crime incidents</li>
+                        <li><strong>Assault</strong> — Violent interpersonal crimes, including simple and aggravated assault</li>
+                        <li><strong>Vehicle theft</strong> — Stolen cars and motorcycles</li>
+                        <li><strong>Drug/narcotic</strong> — Drug possession, manufacturing, and sales offenses</li>
+                        <li><strong>Vandalism</strong> — Damage to property and public infrastructure</li>
+                        <li><strong>Warrants</strong> — Outstanding arrest warrants and related incidents</li>
+                        <li><strong>Burglary</strong> — Breaking and entering of residences and commercial spaces</li>
+                        <li><strong>Suspicious occurrence</strong> — Suspicious activity requiring investigation</li>
+                    </ul>
+                </div>            </div>
+        </section>
+
+        <section id="visualizations">
+            <h2 class="section-title">Visualizations</h2>
+            <p class="section-subtitle">
+                Explore the landscape of crime in San Francisco through three visualizations: a static long-term trend chart, an interactive dot map, and an hourly profile chart.
+            </p>
+
+            <div class="viz-grid">
+                <article class="card">
+                    <div class="card-content">
+                        <h3>Long-term trend snapshot</h3>
+                        <p>High-level yearly movement in focus crime categories. Useful for spotting trends, major events, and seasonal changes.</p>
+                    </div>
+                    <div class="media">
+                        <img src="figures/daily_focus_crimes_counts.png" alt="Static chart showing long-term trends in selected San Francisco crime categories">
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-content">
+                        <h3>Interactive dot map</h3>
+                        <p>Spatial distribution of incidents across the city. The plot is focused on the first month of 2025 to declutter the output.</p>
+                    </div>
+                    <div class="media">
+                        <iframe src="visualizations/crime_dotmap.html" title="Interactive dot map of San Francisco crime incidents" loading="lazy"></iframe>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-content">
+                        <h3>Interactive hourly profile</h3>
+                        <p>Normalized incident levels by hour of day. Great for comparing day/night behavioral patterns.</p>
+                    </div>
+                    <div class="media">
+                        <iframe src="visualizations/normalized_crime_count_hour.html" title="Interactive chart of normalized San Francisco crime counts by hour" loading="lazy"></iframe>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="method">
+            <h2 class="section-title">Method & context</h2>
+            <p class="section-subtitle">
+                The visualizations are based on historical SFPD incident-report data. The goal is descriptive insight: where incidents cluster,
+                when activity peaks, and how broad trends evolve through time.
+            </p>
+            <p class="note">
+                Context references for city background: <a class="inline-link" href="https://en.wikipedia.org/wiki/San_Francisco" target="_blank" rel="noopener noreferrer">San Francisco overview</a> and <a class="inline-link" href="https://www.sf.gov/" target="_blank" rel="noopener noreferrer">SF.gov</a>.
+            </p>
+            <p class="note">
+                Data set found at: <a class="inline-link" href="https://data.sfgov.org/" target="_blank" rel="noopener noreferrer">SF Government Data Portal</a>.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            Built for Social Data Analysis & Visualization · 2026 · San Francisco crime exploration project.
+        </div>
+    </footer>
 </body>
 </html>
