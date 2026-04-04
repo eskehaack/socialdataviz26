@@ -23,10 +23,15 @@
             <div class="hero-card">
                 <span class="eyebrow">San Francisco Crime Atlas</span>
                 <h1>Exploring drug-related crimes in the City by the Bay - San Francisco</h1>
+                
                 <p class="lead">
                     This page presents a small visual story built from historical San Francisco police incident reports.
                     Use it to explore the spatial and temporal patterns of drug-crimes in the city, and to get a sense of how data visualization can help us understand complex social phenomena.
                 </p>
+                
+                <div class="data-caveat">
+                    <b>Note on Interpretation:</b> These visualizations represent police incident reports, not necessarily the total volume of drug use or crime. Shifts in trends may reflect changes in SFPD enforcement priorities, city policy, or reporting protocols rather than a change in underlying activity.
+                </div>
 
                 <div class="facts">
                     <div class="fact">
@@ -80,7 +85,9 @@
                         <p>
                             Long-term trends in drug-related incidents across San Francisco. The plot shows the number of incidents per month over time.
                             The plot is a tribute to how much the drug landscape has changed in the city, from the 2000s with ~800 incidents per month to present day with ~300 incidents per day.
-                            The 2010s show a clear downward trend symbolizing how the city was able to fight the drug epidemic. However, the later 2020s show an alarming upward trend, reflecting the rise of fentanyl and the ongoing challenges in addressing drug-related issues in San Francisco.
+                            The 2010s show a clear downward trend symbolizing how the city was able to fight the drug epidemic. 
+                            Around March 2020, the COVID-19 pandemic hit, and the city went into lockdown. This is reflected in the plot with a sharp drop in drug-related incidents, as the city was empty and the police were focused on enforcing lockdown measures.
+                            However, the later 2020s show an alarming upward trend, reflecting the rise of fentanyl and the ongoing challenges in addressing drug-related issues in San Francisco.
                         </p>
                     </div>
                     <div class="media">
@@ -96,6 +103,17 @@
                             The heatmap uses intensity of color to visualize when and where the drug-related crimes happened.
                             Looking at the animation frames sliding across the screen it becomes apparent that not only are the drug-related crimes centered around down-town San Francisco.
                             Furthermore, we see the decrease in incident reports as the heatmap dissipates and becomes scarce. Similar to the static plot in the above card.
+                            While the heatmap is heavily saturated in the Tenderloin district, this density may be a function of proactive policing rather than a unique concentration of activity.
+                            As a high-priority zone for the SFPD, the Tenderloin experiences significantly higher patrol frequency and surveillance, which naturally leads to a higher volume of incident reports. As stated in SF Planning report,
+                            <i>"Moreover, the neighborhood accounted for nearly 50% of the city's drug offense police reports, ..."</i> (SF Planning, 2024), which is a clear indication of the disproportionate focus on this district.
+                        </p>  
+                        <p>
+                            The shifting hotspots in these heatmaps do not necessarily indicate the successful eradication of crime in specific neighborhoods. Instead, they likely reflect spatial displacement
+                            or changes in proactive policing strategies, where law enforcement shifts its focus and patrols to different areas.
+                            Furthermore, it is critical to acknowledge the role of selection bias in this dataset. As these figures are derived solely from police incident reports,
+                            they only capture crimes that were either observed by officers or reported by the public. This creates a "dark figure" of drug activity, meaning offenses that 
+                            occur in private or in unpatrolled areas remain invisible to the data. Consequently, these heatmaps are more accurately described as a visualization 
+                            of police activity and public reporting density rather than a comprehensive map of all drug-related occurrences in San Francisco.  
                         </p>
                     </div>
                     <div class="media">
@@ -108,7 +126,8 @@
                         <h3>Interactive hourly profile</h3>
                         <p>
                             This next plot gives a different perspective. The plot shows a cumulative time of day for incident reports, separated by year.
-                            It is very apparent that the most drug-related crimes are caught in the afternoon hours, with a peak around 3 pm. Low time is at 5 am.
+                            It is very apparent that the most drug-related crimes are caught in the afternoon hours, with a peak around 3 pm. This could be the result of a higher police activity in the afternoon, 
+                            along with better visibility and more people being around to report drug-related crimes. On the opposite end of the scale, the low time is at 5 am, where fewer people are around and the police activity is lower.
                             Keep in mind that these numbers are unlikely to match the exact distribution of drug use, as an entry in this data set requires the incident to be reported.
                             Furthermore, the various traces in the plot are purposefully left blank. Take your time to discover the trends and insights hidden. 
                             You can select the years from early 2000s to 2021 to see the massive fall and clean-up done in the drug landscape in San Francisco.
@@ -134,6 +153,16 @@
             <p class="note">
                 Data set found at: <a class="inline-link" href="https://data.sfgov.org/" target="_blank" rel="noopener noreferrer">SF Government Data Portal</a>.
             </p>
+        </section>
+
+        <section id="references">
+            <h2 class="section-title">References</h2>
+        <ul class="ref-list">
+                <li>Richardson, R., Schultz, J. M., & Crawford, K. (2019). <em>Dirty Data, Bad Predictions: How Civil Rights Violations Impact Predictive Policing.</em></li>
+                <li>San Francisco Chronicle (2026). <em>Historical Trends in Fentanyl Infiltration.</em></li>
+                <li>SF Government Data Portal. <a href="https://data.sfgov.org/" target="_blank" class="inline-link">Historical Police Incident Reports</a>.</li>
+                <li>San Francisco Planning Department. (2024). Tenderloin Community Action Plan: 2024 Impact Report</li>
+            </ul>
         </section>
     </main>
 
