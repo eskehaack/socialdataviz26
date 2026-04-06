@@ -20,7 +20,9 @@ fig = px.line(
     y="count",
     color="incident_year",
     labels={"hour": "Hour", "count": "Incident Count", "incident_year": "Year"},
+    title="Drug/Narcotic Incidents by Hour and Year",
 )
+
 fig.update_traces(visible="legendonly")
 fig.update_yaxes(showgrid=False)
 fig.update_layout(
